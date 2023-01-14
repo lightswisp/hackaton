@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<script src="scroll.js" defer></script>
+	<script src="./particles.js" defer></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+	<script src="./script.js" defer></script>
+ <title>Encryptor</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+        <header>
+            <h1 id="main-header">Encryptor</h1>
+            <nav id="tor">
+                <ul>
+                    <li><a href="#particles-js">Home</a></li>
+                    <li><a href="#encryptor-page">Encryptor</a></li>
+                    <li><a href="#decryptor-page">Decryptor</a></li>
+                    <li><a href="#about-us-page">About Us</a></li>
+                </ul>
+            </nav>
+         </header>
+         <main>
+            <div id="home-page" class="hidden-fly">
+                <section>
+                    <h2>Welcome on Encryptor</h2>
+					<h3>One Word,</h3>
+                    <h4>Infinite Possibilities!</h4>
+                </section>
+                <ul id="block-links">
+                    <li><a href="#encryptor-page">Encrypt files</a></li>
+                    <li><a href="#decryptor-page">Decrypt files</a></li>
+                </ul>
+            </div>
+            <div id="encryptor-page">
+                <section>
+                    <h2>Secure your data</h2>
+					<h3>Let's encrypt</h3>
+                    <h4>your data!</h4>
+                </section>
+                <div class="encrypt">
+					<form action="/upload" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                          <legend>Encrypt a file</legend>
+						  <label id="choose-file">Choose a file:
+							<input type="file" id="myFile" name="file">
+						  </label>
+                          <label for="pass">
+                            Enter a passphrase: <input type="password" id="pass" name="pass" required>
+                          </label>
+                          <input type="submit">
+                        </fieldset>
+                    </form>
+                    <form action="/encrypt" method="get">
+                        <fieldset>
+                          <legend>Encrypt a phrase</legend>
+                          <label for="phrase">Enter your phrase:
+							<input type="text" id="phrase-encrypt" name="text">
+						  </label>
+                          <label for="pass">Enter a passphrase:
+							<input type="password" id="pass-encrypt" name="pass">
+						  </label>
+                          <input type="submit" class="encrypt-submit">
+                        </fieldset>
+                    </form>
+				</div>
+            </div>
+            <div id="decryptor-page">
+                <section>
+                    <h2>Secure your data</h2>
+                    <h3>Time to reveal</h3>
+                    <h4>what's hidden!</h4>
+                </section>
+                <div class="encrypt">
+					<form action="/download" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                          <legend>Decrypt a file</legend>
+                          <label id="choose-file">Choose a file:
+							<input type="file" id="myFile" name="file">
+						  </label>
+                          <label for="pass">Enter a passphrase:
+							<input type="password" id="pass" name="pass" required>
+                          </label>
+                          <input type="submit">
+                        </fieldset>
+                    </form>
+                   <form action="/decrypt" method="get">
+                        <fieldset>
+                          <legend>Decrypt a phrase</legend>
+                          <label for="phrase">Enter your phrase
+							<input type="text" id="phrase-decrypt" name="text">
+						  </label>
+                          <label for="pass">Enter a passphrase:
+							<input type="password" id="pass-decrypt" name="pass">
+						  </label>
+                          <input type="submit" class="decrypt-submit">
+                        </fieldset>
+                    </form> 
+				</div>
+            </div>
+			<div id="about-us-page">
+                <section>
+                    <h3>Dmitriy Kim</h3>
+                    <p>Hi, Dmitriy is here!  
+                        I hope you enjoyed our website! If you are curious, 
+                        If you have any additional questions or want to contact me, 
+                        please use the following email address: <span>cgpdkim@gmail.com</span>, as well as my Discord:<span> Dmitriy_Kim#2084</span></p>
+                </section>
+                <section>
+                    <h3>Pavel Mutochivskiy</h3>
+                    <p>Hello there, all of the back-end logic was done by me. Hope it works fine :)
+                        I'll leave my github link if you're interested: <a href="https://github.com/lightswisp"><span>https://github.com/lightswisp</span></a>
+                    </p>
+                </section>
+                <section>
+                    <h3>Bianca Rossetti</h3>
+					<p>Hey there! I'm also a first year computer science Dawson student
+						who partook in the making of this website. Hope you all enjoy, make 
+						sure to look out for all the cool CSS features ;) </p>
+                </section>
+            </div>
+         </main>
+         <footer>
+            <a href="https://www.instagram.com/jlolllara">
+                <img src="media/instagram.png" alt="instagram icon" title="instagram">
+            </a>
+            <a href="#about-us-page">
+                <img src="media/discord.png" alt="discord icon" title="discord">
+            </a>
+            <a href="https://www.linkedin.com/in/dmitriy-kim-464703258/">
+                <img src="media/linkedin.png" alt="linkedin icon" title="linkedin">
+            </a>
+            <a href="#about-us-page">
+                <img src="media/email.png" alt="email icon" title="about us">
+            </a>
+         </footer>
+
+
+         </main>
+    </div>
+</body>
+</html>
